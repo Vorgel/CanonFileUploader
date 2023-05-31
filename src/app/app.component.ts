@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'canon-file-uploader';
+  title: string = 'canon-file-uploader';
 }

@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-card class="selected-file-display overflow-span">
+        <mat-card-content class="card-content ">
+            <span class="overflow-span">{{ selectedFile }}</span>
+            <button *ngIf="selectedFile" class="clear-button" (click)="clearSelectedFile()">
+                <mat-icon>clear</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+
+    <button mat-button class="button" (click)="fileInput.click()">Select file</button>
+    <input type="file" #fileInput (change)="handleFileSelect()" style="display: none">
+    <button mat-button class="button" [disabled]="isUploadDisabled()" (click)="uploadSelectedFile()">Upload</button>
+</div>

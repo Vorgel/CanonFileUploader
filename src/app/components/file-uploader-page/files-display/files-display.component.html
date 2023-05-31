@@ -1,0 +1,11 @@
+<div class="container">
+    <mat-list class="list">
+        <mat-list-item  class="mat-list-item-content" *ngFor="let file of files">
+        {{ file?.name }}
+        </mat-list-item>
+    </mat-list>
+    <div class="button-container">
+        <button mat-button class="button" (click)="getAllUploadedFiles()">Get all uploaded files</button>
+        <button mat-button class="button" [disabled]="isClearDisabled()" (click)="clearList()">Clear list</button>
+    </div>
+</div>
